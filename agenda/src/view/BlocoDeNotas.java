@@ -1,6 +1,5 @@
 package view;
 
-import exception.NaoExistemNotasException;
 import model.Notas;
 import service.agenda_contatos.BlocoDeNotasService;
 import util.Util;
@@ -11,19 +10,19 @@ public class BlocoDeNotas {
     private final Scanner scanner = new Scanner(System.in);
     private final BlocoDeNotasService blocoDeNotasService = new BlocoDeNotasService();
 
-    public void CriarNota() {
+    public void criarNota() {
         try {
             String titulo = Util.validarTitulo(scanner, "Digite o título: ", blocoDeNotasService);
             String descricao = Util.validarDescricao(scanner, "Digite a descrição: ");
 
             Notas novaNota = new Notas(titulo, descricao);
-            blocoDeNotasService.CriarNota(novaNota);
+            blocoDeNotasService.criarNota(novaNota);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
 
-    public void ExcluirNota() {
+    public void excluirNota() {
         try {
             String tituloDaNota = Util.ler(scanner, "Digite o título da nota que deseja excluir: ");
             boolean resultado = blocoDeNotasService.excluirNota(tituloDaNota);
@@ -38,7 +37,7 @@ public class BlocoDeNotas {
         }
     }
 
-    public void MostrarNotas() {
+    public void mostrarNotas() {
         if (blocoDeNotasService.getNotas() != null && !blocoDeNotasService.getNotas().isEmpty()) {
             String titulo = "NOTAS";
 

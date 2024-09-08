@@ -20,21 +20,21 @@ public class MenuBlocoDeNotas extends Menu {
             switch (opcaoSelecionada) {
                 case 1:
                     try {
-                        this.blocoDeNotas.CriarNota();
+                        this.blocoDeNotas.criarNota();
                     } catch (Exception e) {
                         Util.erro(e.getMessage());
                     }
                     break;
                 case 2:
                     try {
-                        this.blocoDeNotas.MostrarNotas();
+                        this.blocoDeNotas.mostrarNotas();
                     } catch (Exception e) {
                         Util.erro(e.getMessage());
                     }
                     break;
                 case 3:
                     try {
-                        this.blocoDeNotas.ExcluirNota();
+                        this.blocoDeNotas.excluirNota();
                     } catch (Exception e) {
                         Util.erro(e.getMessage());
                     }

@@ -74,7 +74,7 @@ public class Util {
             if (resposta.length() > 12) {
                 System.out.println("O título não pode ter mais de 12 caracteres. Tente novamente.");
             } else if (resposta.isEmpty()) {
-                System.out.println("O título não pode ser vazio. Tente novamente.");
+                System.out.println("O título não pode estar vazio. Tente novamente.");
             } else if (tituloExiste(resposta, blocoDeNotasService)) {
                 System.out.println("Esse título já existe. Tente um título diferente.");
             } else {

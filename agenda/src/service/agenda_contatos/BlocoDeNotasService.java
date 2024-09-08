@@ -8,7 +8,7 @@ import java.util.List;
 public class BlocoDeNotasService {
     private List<Notas> notas = new ArrayList<Notas>();
 
-    public void CriarNota(Notas nota) {
+    public void criarNota(Notas nota) {
         try {
             notas.add(nota);
         } catch (Exception e) {
